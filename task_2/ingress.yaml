@@ -18,6 +18,16 @@ spec:
                 name: web
                 port:
                   number: 5010
+    - host: sa.homework
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: front
+                port:
+                  number: 3000
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
